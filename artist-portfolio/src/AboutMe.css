@@ -1,0 +1,62 @@
+.AboutMe h2{
+    font-family: Lato-Thin;
+    margin-top: 7px;
+}
+
+.AboutMe-text{
+    padding-left: 5px;
+    border-left: solid 4px #4fccbbba;
+    margin-bottom:30px;
+}
+
+.AboutMe-text p{
+    text-align: left;
+    font-family: Lato-Light;
+}
+
+ul
+{
+    list-style-type: square;
+    padding-left: 16px;
+}
+
+ul > li
+{
+    color: #4fccbbba;
+    text-align: left;
+}
+
+ul > li > span
+{
+    color: black;
+    font-family: Lato-Light;
+}
+
+/*Animation*/
+
+.aboutme-enter {
+    opacity: 0.01;
+}
+
+.aboutme-enter.aboutme-enter-active {
+    opacity: 1;
+    transition: opacity 500ms ease-in;
+}
+
+.aboutme-leave {
+    opacity: 1;
+}
+
+.aboutme-leave.aboutme-leave-active {
+    opacity: 0.01;
+    transition: opacity 300ms ease-in;
+}
+
+.aboutme-appear {
+    opacity: 0.01;
+}
+
+.aboutme-appear.aboutme-appear-active {
+    opacity: 1;
+    transition: opacity .5s ease-in;
+}

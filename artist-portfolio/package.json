@@ -2,15 +2,30 @@
   "name": "artist-portfolio",
   "version": "0.1.0",
   "private": true,
+  "homepage":"/buildr",
   "dependencies": {
     "react": "^16.3.2",
+    "react-burger-menu": "^2.5.2",
     "react-dom": "^16.3.2",
-    "react-scripts": "1.1.4"
+    "react-grid-gallery": "^0.4.11",
+    "react-image-lightbox": "^5.0.0",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.1.4",
+    "react-transition-group": "^1.2.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.3",
+    "eslint": "^4.9.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.4.0"
   }
 }

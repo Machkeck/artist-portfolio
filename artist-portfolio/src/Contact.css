@@ -1,0 +1,40 @@
+.Contact h2{
+    font-family: Lato-Thin;
+    margin-top: 7px;
+}
+
+.Contact-number, .Contact-mail{
+    text-align: left;
+}
+
+.number-prefix{
+    color: #4fccbbba;
+}
+/*Animation*/
+
+.aboutme-enter {
+    opacity: 0.01;
+}
+
+.contact-enter.contact-enter-active {
+    opacity: 1;
+    transition: opacity 500ms ease-in;
+}
+
+.contact-leave {
+    opacity: 1;
+}
+
+.contact-leave.contact-leave-active {
+    opacity: 0.01;
+    transition: opacity 300ms ease-in;
+}
+
+.contact-appear {
+    opacity: 0.01;
+}
+
+.contact-appear.contact-appear-active {
+    opacity: 1;
+    transition: opacity .5s ease-in;
+}
