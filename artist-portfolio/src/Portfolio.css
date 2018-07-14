@@ -47,7 +47,7 @@
 }
 
 .cell .middle{
-    transition: opacity .5s ease;
+    /*transition: opacity .5s ease;*/
     opacity: 0;
     position: absolute;
     top: 50%;
@@ -104,10 +104,31 @@
 @media (max-width : 768px) {
     .cell{
         margin: 15px;
+
+         /*flex: 25%*/
     }
 
     .cell img {
-        height: 120px;
-        width: 120px;
+        height: 130px;
+        width: 130px;
+
+         /*width: 100%;
+         height: 100%;*/
+    }
+}
+
+@media (max-width : 420px) {
+    .cell{
+        margin: 15px;
+
+        /*flex: 25%*/
+    }
+
+    .cell img {
+        height: 85vw;
+        width: 85vw;
+
+        /*width: 100%;
+        height: 100%;*/
     }
 }

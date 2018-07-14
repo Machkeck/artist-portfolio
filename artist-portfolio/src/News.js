@@ -7,7 +7,9 @@ class News extends Component {
             <div className="News">
                 <h2>News</h2>
                 <div className="News-Content">
-                    <p>Currently there is nothing to display</p>
+                    <div className="News-Banner">
+                        <p>Currently there is nothing to display</p>
+                    </div>
                 </div>
             </div>
         );

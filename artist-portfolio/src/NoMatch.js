@@ -14,7 +14,11 @@ class NoMatch extends Component {
             >
                 <div className="NoMatch">
                     <h2>NoMatch</h2>
-                    <h3>This page does not exist <span role="img">&#x1F631;</span></h3>
+                    <div className="NoMatch-Content">
+                        <div className="NoMatch-Banner">
+                            <p>This page does not exist <span role="img">&#x1F631;</span></p>
+                        </div>
+                    </div>
                 </div>
             </CSSTransitionGroup>
         );

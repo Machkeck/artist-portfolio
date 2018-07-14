@@ -53,6 +53,11 @@
     background: rgba(0, 0, 0, 0.3);
 }
 
+
+/*
+ cool color: #7d95f9;
+*/
+
 .App {
     text-align: center;
     display: grid;
@@ -68,8 +73,8 @@
 
 .App-header {
     grid-area: menu;
-    background-color: #43444e21;
-    padding: 20px;
+    /*background-color: #43444e21;*/
+    padding: 25px;
     color: black;
     display: flex;
     flex-flow: column;
@@ -94,6 +99,7 @@
     line-height: 1.2;
     display: block;
     font-family: Lato-Bold;
+    width: fit-content;
 }
 
 .App-title:hover {
@@ -129,6 +135,7 @@ a {
     line-height: 2;
     padding-right: 5px;
     font-family: Lato-Light;
+    transition: all 0.3s ease;
 }
 
 a.active-link {
@@ -150,7 +157,7 @@ a:hover {
 
 @media (max-width: 1224px) {
     .App {
-        grid-template-columns: 120px auto;
+        /*grid-template-columns: 120px auto;*/
     }
 }
 

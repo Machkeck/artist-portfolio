@@ -3,3 +3,20 @@
     margin-top: 7px;
 }
 
+.NoMatch-Content{
+    font-family: Lato-Light;
+    color: #4fccbb;
+    display: flex;
+    justify-content: center;
+}
+
+.NoMatch-Banner {
+    padding: 10px;
+    background: #8080802b;
+    border-radius: 15px;
+}
+
+.NoMatch-Banner p {
+    font-weight: 700;
+    margin: 0;
+}

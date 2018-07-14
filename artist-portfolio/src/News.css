@@ -5,6 +5,18 @@
 
 .News-Content{
     font-family: Lato-Light;
-    color: #4fccbbba;
+    color: #4fccbb;
+    display: flex;
+    justify-content: center;
 }
 
+.News-Banner {
+    padding: 10px;
+    background: #8080802b;
+    border-radius: 15px;
+}
+
+.News-Banner p {
+    font-weight: 700;
+    margin: 0;
+}

@@ -24,3 +24,8 @@ body {
     font-family: Lato-Black, open-sans, sans-serif;
     height: 100vh;
 }
+
+.Page-Header{
+    display: flex;
+    justify-content: center;
+}

@@ -20,7 +20,7 @@ class Contact extends Component {
                             data-link-value="rwlazlo@hotmail.com">rwlazlo@hotmail.com
                         </a>
                     </h2>
-                    <h2 className="Contact-number"><span className="number-prefix">+48</span> 605 695 712</h2>
+                    <h2 className="Contact-number"><span className="number-prefix">+48</span> 604 695 712</h2>
                 </div>
             </CSSTransitionGroup>
         );

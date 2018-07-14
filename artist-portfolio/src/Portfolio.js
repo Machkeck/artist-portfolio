@@ -4,9 +4,13 @@ import Lightbox from 'react-image-lightbox';
 import {CSSTransitionGroup} from 'react-transition-group';
 import './Portfolio.css';
 
+function imgSourceTemplate(img){
+    return `${process.env.PUBLIC_URL}/photos${img.slice(1)}`;
+}
+
 const
     imagesUrls = require.context('../public/photos', true, /.*\.jpg$/),
-    imagesForLightbox = imagesUrls.keys().map(img => 'photos' + img.slice(1)),
+    imagesForLightbox = imagesUrls.keys().map(img => imgSourceTemplate(img)),
 
     groupedSections = imagesUrls.keys().reduce((sections, currentUrl) => {
         const currentObj = sections.find(section => section.name === currentUrl.split('/')[1]);
@@ -17,7 +21,7 @@ const
         }
         return sections;
     }, []);
-
+console.log(imagesForLightbox);
 
 class Portfolio extends Component {
     constructor(props) {
@@ -39,10 +43,10 @@ class Portfolio extends Component {
                         className="cell"
                         onClick={() => this.setState({
                             isOpen: true,
-                            photoIndex: imagesForLightbox.indexOf('photos' + img.slice(1)),
+                            photoIndex: imagesForLightbox.indexOf(imgSourceTemplate(img)),
                         })}
                     >
-                        <img alt={img.slice(1)} src={'photos' + img.slice(1)}/>
+                        <img alt={img.slice(1)} src={imgSourceTemplate(img)}/>
                         <div className="middle">
                             <div className="text">+</div>
                         </div>
@@ -67,7 +71,9 @@ class Portfolio extends Component {
                 transitionLeave={false}
             >
                 <div className="Gallery">
-                    <h2>Portfolio</h2>
+                    <div className="Page-Header">
+                        <h2>Portfolio</h2>
+                    </div>
                     {uiSections}
 
                     {isOpen && (

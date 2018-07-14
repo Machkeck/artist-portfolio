@@ -38,7 +38,7 @@ class App extends Component {
     }
 
     render() {
-        const menu = this.state.width <= 1200
+        const menu = this.state.width <= 720
             ? (
                 <Menu width="100%">
                     <NavLink
