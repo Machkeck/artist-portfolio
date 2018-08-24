@@ -1,8 +1,15 @@
 import React, {Component} from 'react';
 import {CSSTransitionGroup} from 'react-transition-group';
+import {withLocalize, Translate} from 'react-localize-redux';
+import globalTranslations from './translations/global.json';
 import './Contact.css';
 
 class Contact extends Component {
+    constructor(props) {
+        super(props);
+        this.props.addTranslation(globalTranslations);
+    }
+
     render() {
         return (
             <CSSTransitionGroup
@@ -12,7 +19,7 @@ class Contact extends Component {
                 transitionEnter={false}
                 transitionLeave={false}>
                 <div className="Contact">
-                    <h2>Contact</h2>
+                    <h2><Translate id="contact.header">Contact</Translate></h2>
                     <h2 className="Contact-mail">
                         <a
                             href="mailto:rwlazlo@hotmail.com"
@@ -27,4 +34,4 @@ class Contact extends Component {
     }
 }
 
-export default Contact;
+export default withLocalize(Contact);

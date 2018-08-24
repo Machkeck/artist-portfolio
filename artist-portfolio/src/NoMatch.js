@@ -1,8 +1,14 @@
 import React, {Component} from 'react';
 import {CSSTransitionGroup} from 'react-transition-group';
+import {withLocalize, Translate} from 'react-localize-redux';
+import globalTranslations from './translations/global.json';
 import './NoMatch.css';
 
 class NoMatch extends Component {
+    constructor(props){
+        super(props);
+        this.props.addTranslation(globalTranslations);
+    }
     render() {
         return (
             <CSSTransitionGroup
@@ -13,10 +19,10 @@ class NoMatch extends Component {
                 transitionLeave={false}
             >
                 <div className="NoMatch">
-                    <h2>NoMatch</h2>
+                    <h2><Translate id="nomatch.header">NoMatch</Translate></h2>
                     <div className="NoMatch-Content">
                         <div className="NoMatch-Banner">
-                            <p>This page does not exist <span role="img">&#x1F631;</span></p>
+                            <p><Translate id="nomatch.banner">This page does not exist</Translate><span role="img">&#x1F631;</span></p>
                         </div>
                     </div>
                 </div>
@@ -25,4 +31,4 @@ class NoMatch extends Component {
     }
 }
 
-export default NoMatch;
+export default withLocalize(NoMatch);

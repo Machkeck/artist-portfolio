@@ -1,0 +1,33 @@
+{
+  "sections": {
+    "aboutme": ["About me", "O mnie"],
+    "portfolio": ["Portfolio", "Portfolio"],
+    "contact": ["Contact", "Kontakt"]
+  },
+  "contact":{
+    "header": ["Contact", "Kontakt"]
+  },
+  "aboutme": {
+    "header": ["About Me", "O Mnie"],
+    "bio": {
+      "header": ["Renata Nowakowska-Wlazło, Cracovian.", "Renata Nowakowska-Wlazło, krakowianka."],
+      "body": [
+        "Over 10 years ago she started making little drawings in her own style which she later named 'RENATANGLE'. Later she switched to paints and brushes; the true painter's tools. Her guide through the world of art and painting teacher became Malgorzata Mackowiak (painter). She completed a post degree in 'Art' at the University of Warsaw. She works mainly with acrylic paints. Her works have been displayed in Cracow, in Wieliczka by joining the art group 'W wolnej chwili' and in Katowice. She constantly desires to create something interesting out of clay",
+        "Ponad 10 lat temu zaczęła tworzyć małe obrazki we własnej technice, którą nazwała RENATANGLE. Następnie sięgnęła po pędzle i farby, narzędzia właściwe malarstwu. Jej przewodnikiem w świecie sztuki i nauczycielem malarstwa została Małgorzata Maćkowiak (malarka). Ukończyła studia podyplomowe 'Plastyka' na Uniwersytecie Warszawskim. Pracuje głównie farbami akrylowymi. Swoje prace pokazywała w Krakowie, w Wieliczce dołączając do grupy twórczej 'W wolnej chwili' i w Katowicach. Cały czas pragnie stworzyć coś ciekawego z gliny."
+      ]
+    }
+  },
+  "portfolio":{
+    "header": ["Portfolio", "Portfolio"]
+  },
+  "news":{
+    "header": ["News", "Nowosci"],
+    "nothing": ["Currently there is nothing to display", "Aktualnie nie ma nic do wyswietlenia"]
+  },
+  "nomatch":{
+    "header": ["NoMatch", "BrakStrony"],
+    "banner": ["This page does not exist", "Ta strona nie istnieje"]
+  },
+  "helpers":{
+  }
+}

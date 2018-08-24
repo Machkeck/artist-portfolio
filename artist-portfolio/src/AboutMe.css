@@ -4,9 +4,11 @@
 }
 
 .AboutMe-text{
-    padding-left: 5px;
+    padding-left: 10px;
     border-left: solid 4px #4fccbbba;
-    margin-bottom:30px;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    padding-top: 20px;
 }
 
 .AboutMe-text p{
@@ -26,11 +28,28 @@ ul > li
     text-align: left;
 }
 
-ul > li > span
+img{
+    display: block;
+    /*height: 12vw;*/
+    width: 12vw;
+    object-fit: scale-down;
+
+    -webkit-box-shadow: 10px 10px 53px -1px rgba(0,0,0,0.29);
+    -moz-box-shadow: 10px 10px 53px -1px rgba(0,0,0,0.29);
+    box-shadow: 10px 10px 53px -1px rgba(0,0,0,0.29);
+}
+
+@media (max-width : 768px) {
+    img{
+        width: 24vw;
+    }
+}
+
+/*ul > li > span
 {
     color: black;
     font-family: Lato-Light;
-}
+}*/
 
 /*Animation*/
 

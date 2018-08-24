@@ -46,10 +46,12 @@
     backface-visibility: hidden;
 }
 
-.cell .middle{
-    /*transition: opacity .5s ease;*/
+.cell .hover-elements{
     opacity: 0;
     position: absolute;
+}
+
+.cell .middle{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -57,11 +59,29 @@
     text-align: center;
 }
 
+.cell .top-left{
+    top: 10%;
+    left: 10%;
+    transform: translate(-10%, -10%);
+    -ms-transform: translate(-10%, -10%);
+    text-align: left;
+}
+
+.cell .bottom-left{
+    top: 90%;
+    left: 15%;
+    transform: translate(-15%, -90%);
+    -ms-transform: translate(-15%, -90%);
+    text-align: left;
+    font-size: 15px;
+    font-family: Lato-Light;
+}
+
 .cell:hover img {
     opacity: 0.3;
 }
 
-.cell:hover .middle {
+.cell:hover .hover-elements {
     opacity: 1;
 }
 

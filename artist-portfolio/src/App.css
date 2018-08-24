@@ -46,6 +46,7 @@
 .bm-item {
     display: inline-block;
     color: gainsboro;
+    margin: 5px 0;
 }
 
 /* Styling of overlay */
@@ -99,7 +100,6 @@
     line-height: 1.2;
     display: block;
     font-family: Lato-Bold;
-    width: fit-content;
 }
 
 .App-title:hover {
@@ -144,6 +144,23 @@ a.active-link {
 
 a:hover {
     box-shadow: inset 0 -7px 0 0 #4fccbbba;
+}
+
+.App-lang-selector{
+    border: none;
+    border-radius: 15px;
+    background: #8080802b;
+    padding: 6px;
+    font-family: Lato-Light;
+}
+
+.App-lang-selector:hover{
+    background: #8080805e;
+}
+
+
+.bm-item-list .App-lang-selector{
+    color: #b8b7ad;
 }
 
 @keyframes App-logo-spin {

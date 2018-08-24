@@ -2,10 +2,23 @@ import 'react-image-lightbox/style.css'; // This only needs to be imported once 
 import React, {Component} from 'react';
 import Lightbox from 'react-image-lightbox';
 import {CSSTransitionGroup} from 'react-transition-group';
+import {withLocalize, Translate} from 'react-localize-redux';
+import globalTranslations from './translations/global.json';
 import './Portfolio.css';
 
-function imgSourceTemplate(img){
+function imgSourceTemplate(img) {
     return `${process.env.PUBLIC_URL}/photos${img.slice(1)}`;
+}
+
+function getTitle(imgSrc) {
+    return imgSrc.split('/').pop().split('_')[0];
+}
+
+function getMeasurements(imgSrc) {
+    const measurementsArray = imgSrc.split('/').pop().split('.')[0].split('_');
+    return measurementsArray.length === 3
+        ? `${measurementsArray[1].replace(/,/g, '.')}cm x ${measurementsArray[2].replace(/,/g, '.')}cm`
+        : '';
 }
 
 const
@@ -21,11 +34,12 @@ const
         }
         return sections;
     }, []);
-console.log(imagesForLightbox);
 
 class Portfolio extends Component {
     constructor(props) {
         super(props);
+
+        this.props.addTranslation(globalTranslations);
 
         this.state = {
             photoIndex: 0,
@@ -37,6 +51,7 @@ class Portfolio extends Component {
         const {photoIndex, isOpen} = this.state;
         const uiSections = groupedSections.map((gsection, sIndex) => {
             const uiImages = gsection.images.map((img, index) => {
+                console.log('img', img)
                 return (
                     <div
                         key={index}
@@ -47,8 +62,14 @@ class Portfolio extends Component {
                         })}
                     >
                         <img alt={img.slice(1)} src={imgSourceTemplate(img)}/>
-                        <div className="middle">
+                        <div className="hover-elements middle">
                             <div className="text">+</div>
+                        </div>
+                        <div className="hover-elements top-left">
+                            <div className="text">{getTitle(img)}</div>
+                        </div>
+                        <div className="hover-elements bottom-left">
+                            <div className="text">{getMeasurements(img)}</div>
                         </div>
                     </div>
                 );
@@ -72,7 +93,7 @@ class Portfolio extends Component {
             >
                 <div className="Gallery">
                     <div className="Page-Header">
-                        <h2>Portfolio</h2>
+                        <h2><Translate id="portfolio.header">Portfolio</Translate></h2>
                     </div>
                     {uiSections}
 
@@ -92,6 +113,8 @@ class Portfolio extends Component {
                                     photoIndex: (photoIndex + 1) % imagesForLightbox.length,
                                 })
                             }
+                            imageTitle={getTitle(imagesForLightbox[photoIndex])}
+                            imageCaption={getMeasurements(imagesForLightbox[photoIndex])}
                         />
                     )}
 
@@ -101,4 +124,4 @@ class Portfolio extends Component {
     }
 }
 
-export default Portfolio;
+export default withLocalize(Portfolio);
