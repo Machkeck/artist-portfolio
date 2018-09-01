@@ -51,7 +51,6 @@ class Portfolio extends Component {
         const {photoIndex, isOpen} = this.state;
         const uiSections = groupedSections.map((gsection, sIndex) => {
             const uiImages = gsection.images.map((img, index) => {
-                console.log('img', img)
                 return (
                     <div
                         key={index}

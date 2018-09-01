@@ -31,7 +31,7 @@
     cursor: pointer;
 }
 
-.cell img {
+.cell > img {
     display: block;
     height: 12vw;
     width: 12vw;
@@ -115,7 +115,7 @@
 }
 
 @media (max-width : 1224px) {
-    .cell img {
+    .cell > img {
         height: 140px;
         width: 140px;
     }
@@ -128,7 +128,7 @@
          /*flex: 25%*/
     }
 
-    .cell img {
+    .cell > img {
         height: 130px;
         width: 130px;
 
@@ -144,7 +144,7 @@
         /*flex: 25%*/
     }
 
-    .cell img {
+    .cell > img {
         height: 85vw;
         width: 85vw;
 

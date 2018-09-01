@@ -57,7 +57,7 @@ class NormalMenu extends Component {
                 </div>
                 <footer>
                     <Langua/>
-                    <p>Copywrite 2018</p>
+                    <p>by Machkeck 2018</p>
                 </footer>
             </header>
         );
@@ -96,7 +96,7 @@ class HamburgerMenu extends Component {
     render() {
         const LanguageToggle = ({languages, activeLanguage, setActiveLanguage}) => (
             <div>
-                <select className="App-lang-selector" value={activeLanguage != null ? activeLanguage.code : null}
+                <select className="App-lang-selector" value={activeLanguage != null ? activeLanguage.code : ''}
                         onChange={event => setActiveLanguage(event.target.value)}>
                     {languages.map(lang => (
                         <option key={lang.code} value={lang.code}>
@@ -109,7 +109,7 @@ class HamburgerMenu extends Component {
         const Langua = withLocalize(LanguageToggle);
         const LocalizedMenu = withLocalize(Menu);
         return (
-            <LocalizedMenu
+            <Menu
                 width="80%"
                 isOpen={this.state.menuOpen}
                 onStateChange={(state) => this.handleStateChange(state)}
@@ -146,7 +146,7 @@ class HamburgerMenu extends Component {
                 ><Translate id="sections.contact">Contact</Translate>
                 </NavLink>
                 <Langua/>
-            </LocalizedMenu>);
+            </Menu>);
     }
 }
 

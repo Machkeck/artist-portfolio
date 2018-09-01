@@ -6,8 +6,6 @@ import {LocalizeProvider} from "react-localize-redux";
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
-console.log('PUBLIC_URL', process.env.PUBLIC_URL);
-
 ReactDOM.render(
     <LocalizeProvider>
         <HashRouter  basename={`${process.env.PUBLIC_URL}`}>
