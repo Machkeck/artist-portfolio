@@ -39,7 +39,7 @@ class NormalMenu extends Component {
                         <ul className="App-list">
                             <li>
                                 <NavLink to={`/aboutme`} activeClassName="active-link">
-                                    <Translate id="sections.aboutme">About Me</Translate>
+                                    <Translate id="sections.aboutme"></Translate>
                                 </NavLink>
                             </li>
                             <li>

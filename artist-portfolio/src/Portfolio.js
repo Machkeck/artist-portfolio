@@ -21,19 +21,37 @@ function getMeasurements(imgSrc) {
         : '';
 }
 
-const
-    imagesUrls = require.context('../public/photos', true, /.*\.jpg$/),
-    imagesForLightbox = imagesUrls.keys().map(img => imgSourceTemplate(img)),
+const imagesUrls = require.context('../public/photos', true, /.*\.jpg$/).keys();
+imagesUrls.sort((a, b) => {
+    const titleA = parseInt(getTitle(a), 10),
+        titleB = parseInt(getTitle(b), 10);
+    if (titleA < titleB) {
+        return -1;
+    }
+    if (titleA > titleB) {
+        return 1;
+    }
+    return 0;
+});
 
-    groupedSections = imagesUrls.keys().reduce((sections, currentUrl) => {
-        const currentObj = sections.find(section => section.name === currentUrl.split('/')[1]);
-        if (currentObj != null) {
-            currentObj.images.push(currentUrl);
-        } else {
-            sections.push({name: currentUrl.split('/')[1], images: [currentUrl]});
-        }
-        return sections;
-    }, []);
+
+const groupedSections = imagesUrls.reduce((sections, currentUrl) => {
+    const currentObj = sections.find(section => section.name === currentUrl.split('/')[1]);
+    if (currentObj != null) {
+        currentObj.images.push(currentUrl);
+    } else {
+        sections.push({name: currentUrl.split('/')[1], images: [currentUrl]});
+    }
+    return sections;
+}, []);
+
+const imagesForLightbox = [];
+groupedSections.forEach((group) => {
+    group.images.forEach((image) => {
+        imagesForLightbox.push(imgSourceTemplate(image));
+    });
+});
+
 
 class Portfolio extends Component {
     constructor(props) {

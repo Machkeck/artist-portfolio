@@ -10,13 +10,46 @@
     justify-content: center;
 }
 
+.News-Content ul {
+    text-decoration: none;
+    list-style: none;
+}
+
 .News-Banner {
     padding: 10px;
-    background: #8080802b;
+    background: #8080801c;
     border-radius: 15px;
+    display: flex;
+    flex-flow: column;
+    margin: 10px 0px;
 }
 
 .News-Banner p {
     font-weight: 700;
     margin: 0;
+}
+
+.News-Banner img{
+    display: block;
+    height: 12vw;
+    width: 12vw;
+    object-fit: scale-down;
+    border-radius: 5px;
+
+    -webkit-box-shadow: 10px 10px 53px -1px rgba(0,0,0,0.29);
+    -moz-box-shadow: 10px 10px 53px -1px rgba(0,0,0,0.29);
+    box-shadow: 10px 10px 53px -1px rgba(0,0,0,0.29);
+}
+
+.News-Header {
+    margin-bottom: 5px;
+}
+
+.News-Body {
+    display:flex;
+    flex-flow: row;
+}
+
+.News-Body p {
+    margin-left: 10px;
 }
